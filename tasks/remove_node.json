@@ -1,0 +1,16 @@
+{
+  "description": "Deactivate and purge a Puppet node using the Puppet Server APIs, with automatic retry on failure.",
+  "parameters": {
+    "certname": {
+      "type": "String",
+      "description": "The certificate name of the node to remove."
+    },
+    "token": {
+      "type": "String",
+      "description": "PE RBAC token used for API authentication."
+    }
+  },
+  "supports_noop": false
+}
+
+
