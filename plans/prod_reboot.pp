@@ -1,4 +1,4 @@
-plan profile::prod_reboot (
+plan adhoc::prod_reboot (
   String $reboot_section,
 ) {
   $query = [
