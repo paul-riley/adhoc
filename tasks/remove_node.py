@@ -18,7 +18,7 @@ def success(message):
     sys.exit(0)
 
 
-def api_put(url, headers, data, retries=1):
+def clean_certificate(url, headers, data, retries=1):
     ctx = ssl._create_unverified_context()
     payload = json.dumps(data).encode("utf-8")
     attempt = 0
@@ -89,7 +89,7 @@ def main():
         "certnames": [certname]
     }
 
-    ok, msg = api_put(clean_url, headers, body, retries=1)
+    ok, msg = clean_certificate(clean_url, headers, body, retries=1)
     if not ok:
         fail(f"Failed to clean certificate for '{certname}': {msg}")
 
